@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include "string.h"
+char str1[] = "KeVietVanVanVietKeVan";
+
+int Dem1(char *ptr){
+    int count = 0;
+    for (int i = 0; i<22; i++)
+    {
+        if (ptr[i] == '\0')
+        {
+            break;
+        }else{
+            count++;
+        }
+        
+    }
+    return count;
+}
+
+int TimChuoi(char *ptr1, char *ptr2, int n1, int n2){
+    int n = 0;
+    int count = 0;
+    for (int i = 0; i < n1; i++)
+    {
+        for (int j = 0; j < n2; j++)
+        {
+            if (ptr1[i+j] == ptr2[j])
+            {
+                n++;
+            }else{
+                break;
+            }
+            
+        }
+        if (n == n2)
+        {
+            count++;
+            
+        }
+        n = 0;
+        
+    }
+    return count;
+}
+int main(int argc, char const *argv[])
+{
+    char str2[4];
+    printf("Nhap vao chuoi can tim: ");
+    gets(str2);
+    
+    printf("\nChuoi xuat hien %d lan", TimChuoi(str1, str2, Dem1(str1), Dem1(str2)));
+
+    return 0;
+}
