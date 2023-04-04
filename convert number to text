@@ -1,0 +1,301 @@
+#include <stdio.h>
+#include <stdint.h>
+
+
+// Truyền vào một số và đọc số đó ra bằng chữ 
+
+void Convert(uint64_t number)
+{   
+    int count = 1;
+    for(int i = 1; i<1000000; i=i*10) 
+    {
+        if((number/i)!=0)// chia lấy phần nguyên khác 0
+        {
+            count++;
+        }
+    }
+    if (count == 7)
+    {
+        switch ((number/1000000)%10) // chia lấy phần nguyên rồi chia cho 10 lấy phần dư
+        {
+    case 0:
+        break;
+    case 1:
+        printf("Mot trieu ");
+        break;
+    case 2:
+        printf("Hai trieu ");
+        break;
+    case 3:
+        printf("Ba trieu ");
+        break;
+    case 4:
+        printf("Bon trieu ");
+        break;
+    case 5:
+        printf("Nam trieu ");
+        break;
+    case 6:
+        printf("Sau trieu ");
+        break;
+    case 7:
+        printf("Bay trieu ");
+        break;
+    case 8:
+        printf("Tam trieu ");
+        break;
+    case 9:
+        printf("Chin trieu ");
+        break;
+    default:
+        break;
+
+    }
+    goto tramnghin;
+    }
+   
+    if (count == 6)
+    {   tramnghin:
+        switch ((number/100000)%10)
+        {
+    case 0:
+        printf("Khong tram ");
+        break;
+    case 1:
+        printf("Mot tram ");
+        break;
+    case 2:
+        printf("Hai tram ");
+        break;
+    case 3:
+        printf("Ba tram ");
+        break;
+    case 4:
+        printf("Bon tram ");
+        break;
+    case 5:
+        printf("Nam tram ");
+        break;
+    case 6:
+        printf("Sau tram ");
+        break;
+    case 7:
+        printf("Bay tram ");
+        break;
+    case 8:
+        printf("Tam tram ");
+        break;
+    case 9:
+        printf("Chin tram ");
+        break;
+    default:
+        break;
+    }
+    goto khongchuc;
+    }
+    if (count == 5)
+    {   khongchuc:
+        switch ((number/10000)%10)
+        {
+    case 0:
+        printf("le ");
+        break;
+    case 1:
+        printf("Muoi ");
+        break;
+    case 2:
+        printf("Hai muoi ");
+        break;
+    case 3:
+        printf("Ba muoi ");
+        break;
+    case 4:
+        printf("Bon muoi ");
+        break;
+    case 5:
+        printf("Nam muoi ");
+        break;
+    case 6:
+        printf("Sau muoi ");
+        break;
+    case 7:
+        printf("Bay muoi ");
+        break;
+    case 8:
+        printf("Tam muoi ");
+        break;
+    case 9:
+        printf("Chin muoi ");
+        break;
+    default:
+        break;
+    }
+    goto lenghin;
+    }
+    if (count == 4)
+    {   lenghin:
+        switch ((number/1000)%10)
+        {
+    case 0:
+        printf("Khong tram ");
+        break;
+    case 1:
+        printf("Mot nghin ");
+        break;
+    case 2:
+        printf("Hai nghin ");
+        break;
+    case 3:
+        printf("Ba nghin ");
+        break;
+    case 4:
+        printf("Bon nghin ");
+        break;
+    case 5:
+        printf("Nam nghin");
+        break;
+    case 6:
+        printf("Sau nghin");
+        break;
+    case 7:
+        printf("Bay nghin");
+        break;
+    case 8:
+        printf("Tam nghin");
+        break;
+    case 9:
+        printf("Chin nghin");
+        break;
+    default:
+        break;
+    }
+    goto tram;
+    }
+    if (count == 3)
+    {   tram:
+        switch ((number/100)%10)
+        {
+    case 0:
+        
+        break;
+    case 1:
+        printf("Mot tram ");
+        break;
+    case 2:
+        printf("Hai tram ");
+        break;
+    case 3:
+        printf("Ba tram ");
+        break;
+    case 4:
+        printf("Bon tram ");
+        break;
+    case 5:
+        printf("Nam tram ");
+        break;
+    case 6:
+        printf("Sau tram ");
+        break;
+    case 7:
+        printf("Bay tram ");
+        break;
+    case 8:
+        printf("Tam tram ");
+        break;
+    case 9:
+        printf("Chin tram ");
+        break;
+    default:
+        break;
+    }
+    goto Chuc;
+    }
+    if (count == 2)
+    {   Chuc:
+        switch ((number/10)%10)
+        {
+    case 0:
+        printf("le ");
+        break;
+    case 1:
+        printf("Muoi ");
+        break;
+    case 2:
+        printf("Hai muoi ");
+        break;
+    case 3:
+        printf("Ba muoi ");
+        break;
+    case 4:
+        printf("Bon muoi ");
+        break;
+    case 5:
+        printf("Nam muoi ");
+        break;
+    case 6:
+        printf("Sau muoi ");
+        break;
+    case 7:
+        printf("Bay muoi ");
+        break;
+    case 8:
+        printf("\nTam muoi ");
+        break;
+    case 9:
+        printf("\nChin muoi ");
+        break;
+    default:
+        break;
+    }
+    goto khong;
+    }
+    if (count == 1)
+    {   khong:
+        switch ((number)%10)
+        {
+    case 0:
+        
+        break;
+    case 1:
+        printf("Mot ");
+        break;
+    case 2:
+        printf("Hai ");
+        break;
+    case 3:
+        printf("Ba ");
+        break;
+    case 4:
+        printf("Bon ");
+        break;
+    case 5:
+        printf("Nam ");
+        break;
+    case 6:
+        printf("Sau ");
+        break;
+    case 7:
+        printf("Bay ");
+        break;
+    case 8:
+        printf("Tam ");
+        break;
+    case 9:
+        printf("Chin ");
+        break;
+    default:
+        break;
+    }
+    }
+    
+    
+}
+
+
+
+int main(int argc, char const *argv[])
+{   
+    Convert(1004263); // chuyển đổi số ra bằng chữ
+    
+    return 0;
+}
