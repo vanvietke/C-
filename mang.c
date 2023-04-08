@@ -2,7 +2,7 @@
 // sort array from smallest to largest
 // List how many times the elements appear
 
-void main()
+int main()
 {
     int array[] = {1,7,9,3,7,1,2,6,7,8,2,9,9,3};
     int n = sizeof(array)/sizeof(array[0]);
